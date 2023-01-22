@@ -1,0 +1,172 @@
+{
+  "rows": [
+    {
+      "id": 0,
+      "barcode": "BRI-PM26-0260122",
+      "jde_id_manual": "026221443659",
+      "pcs_id_end": "2022-07-16T19:20:30+01:00",
+      "pcs_operator": true,
+      "quality": "Ready"
+    },
+    {
+      "id": 1,
+      "barcode": "BRI-PM26-0260121",
+      "jde_id_manual": "026221443658",
+      "pcs_id_end": "2022-07-16T19:20:30+01:00",
+      "pcs_operator": false,
+      "quality": "Ready"
+    },
+    {
+      "id": 2,
+      "barcode": "BRI-PM26-0260120",
+      "jde_id_manual": "026221443657",
+      "pcs_id_end": "2022-07-16T19:00:30+01:00",
+      "pcs_operator": true,
+      "quality": "Ready"
+    },
+    {
+      "id": 3,
+      "barcode": "BRI-PM26-0260119",
+      "jde_id_manual": "026221443656",
+      "pcs_id_end": "2022-07-16T19:00:30+01:00",
+      "pcs_operator": false,
+      "quality": "Ready"
+    },
+    {
+      "id": 4,
+      "barcode": "BRI-PM26-0260118",
+      "jde_id_manual": "026221443655",
+      "pcs_id_end": "2022-07-16T18:40:30+01:00",
+      "pcs_operator": true,
+      "quality": "Good"
+    },
+    {
+      "id": 5,
+      "barcode": "BRI-PM26-0260117",
+      "jde_id_manual": "026221443654",
+      "pcs_id_end": "2022-07-16T18:40:30+01:00",
+      "pcs_operator": false,
+      "quality": "Good"
+    },
+    {
+      "id": 6,
+      "barcode": "BRI-PM26-0260116",
+      "jde_id_manual": "026221443653",
+      "pcs_id_end": "2022-07-16T18:20:30+01:00",
+      "pcs_operator": true,
+      "quality": "Good"
+    },
+    {
+      "id": 7,
+      "barcode": "BRI-PM26-0260115",
+      "jde_id_manual": "026221443652",
+      "pcs_id_end": "2022-07-16T18:20:30+01:00",
+      "pcs_operator": false,
+      "quality": "Pulper"
+    },
+    {
+      "id": 8,
+      "barcode": "BRI-PM26-0260114",
+      "jde_id_manual": "026221443651",
+      "pcs_id_end": "2022-07-16T18:00:30+01:00",
+      "pcs_operator": true,
+      "quality": "Pulper"
+    },
+    {
+      "id": 9,
+      "barcode": "BRI-PM26-0260113",
+      "jde_id_manual": "026221443650",
+      "pcs_id_end": "2022-07-16T18:00:30+01:00",
+      "pcs_operator": false,
+      "quality": "Good"
+    },
+    {
+      "id": 10,
+      "barcode": "BRI-PM26-0260112",
+      "jde_id_manual": "026221443649",
+      "pcs_id_end": "2022-07-16T17:40:30+01:00",
+      "pcs_operator": true,
+      "quality": "Scrap"
+    },
+    {
+      "id": 11,
+      "barcode": "BRI-PM26-0260111",
+      "jde_id_manual": "026221443648",
+      "pcs_id_end": "2022-07-16T17:40:30+01:00",
+      "pcs_operator": false,
+      "quality": "Scrap"
+    },
+    {
+      "id": 12,
+      "barcode": "BRI-PM26-0260110",
+      "jde_id_manual": "026221443647",
+      "pcs_id_end": "2022-07-16T17:20:30+01:00",
+      "pcs_operator": true,
+      "quality": "Good"
+    },
+    {
+      "id": 13,
+      "barcode": "BRI-PM26-0260109",
+      "jde_id_manual": "026221443646",
+      "pcs_id_end": "2022-07-16T17:20:30+01:00",
+      "pcs_operator": false,
+      "quality": "Good"
+    },
+    {
+      "id": 14,
+      "barcode": "BRI-PM26-0260108",
+      "jde_id_manual": "026221443645",
+      "pcs_id_end": "2022-07-16T17:00:30+01:00",
+      "pcs_operator": true,
+      "quality": "Good"
+    },
+    {
+      "id": 15,
+      "barcode": "BRI-PM26-0260107",
+      "jde_id_manual": "026221443644",
+      "pcs_id_end": "2022-07-16T17:00:30+01:00",
+      "pcs_operator": false,
+      "quality": "Good"
+    },
+    {
+      "id": 16,
+      "barcode": "BRI-PM26-0260106",
+      "jde_id_manual": "026221443643",
+      "pcs_id_end": "2022-07-16T16:40:30+01:00",
+      "pcs_operator": true,
+      "quality": "Pulper"
+    },
+    {
+      "id": 17,
+      "barcode": "BRI-PM26-0260105",
+      "jde_id_manual": "026221443642",
+      "pcs_id_end": "2022-07-16T16:40:30+01:00",
+      "pcs_operator": false,
+      "quality": "Scrap"
+    },
+    {
+      "id": 18,
+      "barcode": "BRI-PM26-0260104",
+      "jde_id_manual": "026221443641",
+      "pcs_id_end": "2022-07-16T16:20:30+01:00",
+      "pcs_operator": true,
+      "quality": "Good"
+    },
+    {
+      "id": 19,
+      "barcode": "BRI-PM26-0260103",
+      "jde_id_manual": "026221443640",
+      "pcs_id_end": "2022-07-16T16:20:30+01:00",
+      "pcs_operator": false,
+      "quality": "Good"
+    },
+    {
+      "id": 20,
+      "barcode": "BRI-PM26-0260102",
+      "jde_id_manual": "026221443639",
+      "pcs_id_end": "2022-07-16T16:00:30+01:00",
+      "pcs_operator": true,
+      "quality": "Pulper"
+    }
+  ]
+}

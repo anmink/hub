@@ -1,0 +1,29 @@
+:root {
+  --color-primary: #002d55;
+  --color-secondary: #96d2dc;
+  --color-third: #0064aa;
+  --color-bg: #fafbfe;
+  --color-font: #212529;
+  --color-font-secondary: #939da7;
+  --color-tag-blue: #96d2dc;
+  --color-tag-green: #009b82;
+  --color-white: #ffffff;
+  --color-lightGray: #ececec;
+  --color-label: #9d9d9d;
+
+  --font-regular: 'Nexa';
+  --font-bold: 'NexaBold';
+  --font-light: 'NexaLight';
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+
+  --font-size-h1: 2rem;
+  --font-size-h2: 1.75rem;
+  --font-size-h3: 1.5rem;
+  --font-size-h4: 1.25rem;
+  --font-size-default: 1rem;
+  --font-size-small: 0.875rem;
+  --font-size-extrasmall: 0.6rem;
+}
