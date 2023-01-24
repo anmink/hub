@@ -17,6 +17,8 @@
 
     <div class="footerWrapper">
       <button @click="submitForm" class="buttonBasic btn">DONE</button>
+      <modal v-if="showModal" @close="showModal = false"></modal>
+
       <Footer />
     </div>
   </div>
@@ -25,6 +27,7 @@
 <script>
 import Header from '../components/header.vue'
 import Footer from '../components/footer.vue'
+import modal from '../components/Modal.vue'
 import useValidate from '@vuelidate/core'
 import { required } from '@vuelidate/validators'
 
@@ -32,12 +35,14 @@ export default {
   components: {
     Header,
     Footer,
+    modal,
   },
   data() {
     return {
       v$: useValidate(),
       code: '',
       errorMsg: '',
+      showModal: false,
     }
   },
   methods: {
@@ -48,7 +53,7 @@ export default {
     submitForm() {
       this.v$.$validate()
       if (!this.v$.$error) {
-        this.$router.push('/rating')
+        this.showModal = true
       } else {
         this.errorMsg = true
       }
