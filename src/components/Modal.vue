@@ -2,9 +2,11 @@
   <transition class="modal">
     <div class="modal-mask">
       <div class="modal-wrapper">
-        <button @click="$emit('close')" class="xButton">
-          <img src="@/assets/icons/x.svg" />
-        </button>
+        <div class="buttonWrapper">
+          <button @click="$emit('close')" class="xButton">
+            <img src="@/assets/icons/x.svg" />
+          </button>
+        </div>
         <div class="modal-container">
           <div class="wrapper space-between">
             <div class="numberWrapper space-between">
@@ -19,7 +21,7 @@
               <div>18.01.2022</div>
               <div>11:02 am</div>
               <div>Driver</div>
-              <div class="color">Driver</div>
+              <Tag :content="'Good'" :type="'Good'" />
             </div>
           </div>
         </div>
@@ -28,7 +30,15 @@
   </transition>
 </template>
 
-<script></script>
+<script>
+import Tag from '../components/tag.vue'
+
+export default {
+  components: {
+    Tag,
+  },
+}
+</script>
 
 <style scoped>
 .modal {
@@ -41,7 +51,8 @@
   right: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 45, 85, 0.5);
+  backdrop-filter: blur(2px);
   display: table;
   transition: opacity 0.3s ease;
 }
@@ -51,9 +62,10 @@
 }
 .modal-container {
   padding: 16px;
-  margin: auto 8px;
-  background-color: #fff;
+  margin: auto 16px;
+  background-color: var(--color-primary);
   border-radius: 2px;
+  color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
   transition: all 0.3s ease;
 }
@@ -90,11 +102,16 @@
   color: var(--color-label);
 }
 
+.buttonWrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
 .xButton {
   background-color: transparent;
   border: none;
-  margin-left: 8rem;
-  margin-right: 8rem;
 }
 
 @media (min-width: 768px) {
