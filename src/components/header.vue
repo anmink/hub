@@ -27,9 +27,6 @@ export default {
     <button @click="showModal = true" class="button" v-if="itemRight">
       <img src="@/assets/icons/x.svg" />
     </button>
-    <button @click="reloadPage" class="button" v-else>
-      <img src="@/assets/icons/reload.svg" />
-    </button>
   </div>
 </template>
 
