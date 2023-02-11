@@ -5,27 +5,19 @@ export default {
     itemRight: Boolean,
     router: String,
   },
-  methods: {
-    reloadPage() {
-      window.location.reload()
-    },
-    goBack() {
-      return this.$router.go(-1)
-    },
-  },
 }
 </script>
 
 <template>
   <div class="wrapper space-between">
-    <button class="button" @click="goBack" v-if="itemLeft">
+    <button class="button" @click="this.$router.go(-1)" v-if="itemLeft">
       <img src="@/assets/icons/back.svg" />
     </button>
     <div class="button" v-else></div>
     <img src="@/assets/icons/logo.svg" />
 
-    <button @click="showModal = true" class="button" v-if="itemRight">
-      <img src="@/assets/icons/x.svg" />
+    <button class="button" v-if="itemRight" @click="this.$router.push('/')">
+      <img src="@/assets/icons/home.svg" />
     </button>
   </div>
 </template>

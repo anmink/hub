@@ -2,10 +2,10 @@
   <div class="mainWrapper">
     <div></div>
     <div class="contentWrapper">
-      <Header itemLeft itemRight />
+      <Header itemRight />
 
       <div class="descriptionContainer">
-        <h2>Beschreibung</h2>
+        <h2>Scan barcode from sticked label and pull the scan-trigger</h2>
         <div class="descWrapper">
           <img src="../assets/icons/scan.svg" class="svg" />
           <input class="inputField" v-model="code" autofocus />
