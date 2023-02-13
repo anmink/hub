@@ -19,8 +19,7 @@ export default {
   <div class="container">
     <div class="numberContainer">
       <p>{{ this.details.lotno }}</p>
-
-      <Tag content="FREIGEGEBEN" type="Good" class="margin" />
+      <div><Tag content="FREIGEGEBEN" type="Good" class="margin" /></div>
     </div>
     <hr class="line" />
     <div class="detailsContainer space-between">
@@ -31,9 +30,8 @@ export default {
         </div>
         <div class="detail">
           <p class="headline">Rollenbreite</p>
-          <div v-for="detail in this.details.rows" :key="detail.id">
-            <p>{{ detail.width }} cm</p>
-          </div>
+
+          <p>{{ this.details.width }} cm</p>
         </div>
         <div class="detail">
           <p class="headline">Längsfestigkeit</p>
@@ -51,10 +49,9 @@ export default {
         </div>
         <div class="detail">
           <p class="headline">Gewicht</p>
-          <div v-for="detail in this.details.rows" :key="detail.id">
-            <div v-for="item in detail.PMI_data" :key="item.id">
-              <p>{{ item.core_weight }} kg</p>
-            </div>
+
+          <div v-for="item in this.details.PMI_data" :key="item.id">
+            <p>{{ item.core_weight }} kg</p>
           </div>
         </div>
       </div>
@@ -62,18 +59,15 @@ export default {
         <div class="detail">
           <p class="headline">Grammatur</p>
 
-          <div v-for="detail in this.details.rows" :key="detail.id">
-            <p>{{ detail.grammage }} g/m²</p>
-          </div>
+          <p>{{ this.details.grammage }} g/m²</p>
         </div>
         <div class="detail">
           <p class="headline">Produktionsdatum</p>
-          <div v-for="detail in this.details.rows" :key="detail.id">
-            <p>
-              {{ detail.prod_day }}.{{ detail.prod_month }}.
-              {{ detail.prod_year }}
-            </p>
-          </div>
+
+          <p>
+            {{ this.details.prod_day }}.{{ this.details.prod_month }}.
+            {{ this.details.prod_year }}
+          </p>
         </div>
       </div>
     </div>
@@ -106,6 +100,7 @@ export default {
   color: var(--color-font);
   box-shadow: 0 4px 16px rgba(112, 144, 176, 0.16);
   border: none;
+  margin-bottom: 1rem;
 }
 
 .numberContainer {

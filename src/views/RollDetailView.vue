@@ -30,19 +30,12 @@ export default {
 
 <template>
   <div>
-    <Header itemRight />
+    <Header itemLeft itemRight />
     <div class="results">Results: {{ this.data.total }}</div>
-    <div>{{ this.$store.state.barcode }}</div>
-    <div v-for="detail in this.data.rows" :key="detail.id">
-      {{ detail.PMI_data }}
-      <div v-for="item in detail.PMI_data" :key="item.id">
-        <div>{{ item.core_weight }}</div>
-      </div>
-    </div>
     <RollDetails
-      v-for="item in this.data.total"
+      v-for="item in this.data.rows"
       :key="item.id"
-      :details="this.data.rows"
+      :details="item"
     />
   </div>
 </template>
