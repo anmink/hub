@@ -1,9 +1,16 @@
 <script>
 import Tag from './tag.vue'
+import moment from 'moment'
 
 export default {
   components: {
     Tag,
+  },
+  props: ['details'],
+  data() {
+    return {
+      dot: '.',
+    }
   },
 }
 </script>
@@ -11,8 +18,9 @@ export default {
 <template>
   <div class="container">
     <div class="numberContainer">
-      <p>001230160916</p>
-      <Tag content="FREIGEGEBEN" type="Good" />
+      <p>{{ this.details.lotno }}</p>
+
+      <Tag content="FREIGEGEBEN" type="Good" class="margin" />
     </div>
     <hr class="line" />
     <div class="detailsContainer space-between">
@@ -23,7 +31,9 @@ export default {
         </div>
         <div class="detail">
           <p class="headline">Rollenbreite</p>
-          <p>170 cm</p>
+          <div v-for="detail in this.details.rows" :key="detail.id">
+            <p>{{ detail.width }} cm</p>
+          </div>
         </div>
         <div class="detail">
           <p class="headline">Längsfestigkeit</p>
@@ -41,17 +51,29 @@ export default {
         </div>
         <div class="detail">
           <p class="headline">Gewicht</p>
-          <p>39 kg</p>
+          <div v-for="detail in this.details.rows" :key="detail.id">
+            <div v-for="item in detail.PMI_data" :key="item.id">
+              <p>{{ item.core_weight }} kg</p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="detailRow">
         <div class="detail">
           <p class="headline">Grammatur</p>
-          <p>40 g/m²</p>
+
+          <div v-for="detail in this.details.rows" :key="detail.id">
+            <p>{{ detail.grammage }} g/m²</p>
+          </div>
         </div>
         <div class="detail">
           <p class="headline">Produktionsdatum</p>
-          <p>17.08.2022</p>
+          <div v-for="detail in this.details.rows" :key="detail.id">
+            <p>
+              {{ detail.prod_day }}.{{ detail.prod_month }}.
+              {{ detail.prod_year }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -88,7 +110,6 @@ export default {
 
 .numberContainer {
   display: flex;
-  gap: 1rem;
   align-items: center;
 }
 .detailsContainer {
@@ -114,6 +135,10 @@ p {
   font-family: var(--font-regular);
   color: var(--color-font);
   margin: 4px;
+}
+
+.margin {
+  margin-left: 1rem;
 }
 
 .headline {

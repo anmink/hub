@@ -11,7 +11,7 @@ export default {
 <template>
   <div class="mainWrapper">
     <div class="contentWrapper">
-      <Header itemLeft itemRight />
+      <Header itemRight />
       <div class="buttonWrapper">
         <button class="card">
           <img src="../assets/icons/star.svg" class="svg" />
