@@ -26,30 +26,17 @@ export default {
       <div class="detailRow">
         <div class="detail">
           <p class="headline">Querfestigkeit</p>
-          <p>4,0 N/mm²</p>
+          <div v-for="item in this.details.JDE_F3711" :key="item.id">
+            <p>{{ item.tensile_strength_md_dry }} N/mm²</p>
+            <p>{{ item.tensile_strength_cd_dry }} N/mm²</p>
+          </div>
         </div>
         <div class="detail">
           <p class="headline">Rollenbreite</p>
-
           <p>{{ this.details.width }} cm</p>
         </div>
         <div class="detail">
-          <p class="headline">Längsfestigkeit</p>
-          <p>1,2 N/mm²</p>
-        </div>
-      </div>
-      <div class="detailRow">
-        <div class="detail">
-          <p class="headline">Dehnung</p>
-          <p>4,0 %</p>
-        </div>
-        <div class="detail">
-          <p class="headline">Anzahl Abrisse</p>
-          <p>0</p>
-        </div>
-        <div class="detail">
           <p class="headline">Gewicht</p>
-
           <div v-for="item in this.details.PMI_data" :key="item.id">
             <p>{{ item.core_weight }} kg</p>
           </div>
@@ -57,9 +44,22 @@ export default {
       </div>
       <div class="detailRow">
         <div class="detail">
+          <p class="headline">Dehnung</p>
+          <div v-for="item in this.details.JDE_F3711" :key="item.id">
+            <p>{{ item.elongation_md_dry }} %</p>
+            <div class="ghostContent">x</div>
+          </div>
+        </div>
+        <div class="detail">
+          <p class="headline">Anzahl Abrisse</p>
+          <p>0</p>
+        </div>
+      </div>
+      <div class="detailRow">
+        <div class="detail">
           <p class="headline">Grammatur</p>
-
           <p>{{ this.details.grammage }} g/m²</p>
+          <div class="ghostContent">x</div>
         </div>
         <div class="detail">
           <p class="headline">Produktionsdatum</p>
@@ -147,5 +147,9 @@ p {
   height: 1px;
   border: 0;
   border-top: 1px solid #ccc;
+}
+
+.ghostContent {
+  visibility: hidden;
 }
 </style>
