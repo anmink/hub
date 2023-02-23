@@ -21,10 +21,6 @@ export default {
           <img src="../assets/icons/info.svg" class="svg" />
           <p class="text">Roll informations</p>
         </button>
-        <button class="card" @click="this.$router.push('/details')">
-          <img src="../assets/icons/info.svg" class="svg" />
-          <p class="text">Details</p>
-        </button>
       </div>
     </div>
   </div>

@@ -19,7 +19,7 @@ export default {
   <div class="container">
     <div class="numberContainer">
       <p>{{ this.details.lotno }}</p>
-      <div><Tag content="FREIGEGEBEN" type="Good" class="margin" /></div>
+      <div><Tag :code="this.details" /></div>
     </div>
     <hr class="line" />
     <div class="detailsContainer space-between">
@@ -27,7 +27,6 @@ export default {
         <div class="detail">
           <p class="headline">Querfestigkeit</p>
           <div v-for="item in this.details.JDE_F3711" :key="item.id">
-            <p>{{ item.tensile_strength_md_dry }} N/mm²</p>
             <p>{{ item.tensile_strength_cd_dry }} N/mm²</p>
           </div>
         </div>
@@ -38,7 +37,7 @@ export default {
         <div class="detail">
           <p class="headline">Gewicht</p>
           <div v-for="item in this.details.PMI_data" :key="item.id">
-            <p>{{ item.core_weight }} kg</p>
+            <p>{{ item.quantity_trqt }} kg</p>
           </div>
         </div>
       </div>
@@ -47,31 +46,44 @@ export default {
           <p class="headline">Dehnung</p>
           <div v-for="item in this.details.JDE_F3711" :key="item.id">
             <p>{{ item.elongation_md_dry }} %</p>
-            <div class="ghostContent">x</div>
           </div>
         </div>
         <div class="detail">
           <p class="headline">Anzahl Abrisse</p>
-          <p>0</p>
+          <div v-for="item in this.details.JDE_F3711" :key="item.id">
+            <p>0</p>
+          </div>
+        </div>
+        <div class="detail">
+          <p class="headline">Längsfestigkeit</p>
+          <div v-for="item in this.details.JDE_F3711" :key="item.id">
+            <p>{{ item.tensile_strength_md_dry }} N/mm²</p>
+          </div>
         </div>
       </div>
       <div class="detailRow">
         <div class="detail">
           <p class="headline">Grammatur</p>
           <p>{{ this.details.grammage }} g/m²</p>
-          <div class="ghostContent">x</div>
         </div>
         <div class="detail">
           <p class="headline">Produktionsdatum</p>
-
           <p>
             {{ this.details.prod_day }}.{{ this.details.prod_month }}.
             {{ this.details.prod_year }}
           </p>
         </div>
+        <div class="detail">
+          <p class="headline">Weichheit</p>
+          <div v-for="item in this.details.JDE_F3711" :key="item.id">
+            <p>{{ item.handfeel_emtec }}</p>
+          </div>
+        </div>
       </div>
     </div>
-    <hr class="line" />
+
+    <!-- erst einmal ausblenden, da Daten nicht verfügbar -->
+    <!--  <hr class="line" />
     <div class="defectContainer space-between">
       <div class="defectRow">
         <p class="headline">Fehlertyp</p>
@@ -88,7 +100,7 @@ export default {
         <p>1042 cm</p>
         <p>1078 cm</p>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -147,9 +159,5 @@ p {
   height: 1px;
   border: 0;
   border-top: 1px solid #ccc;
-}
-
-.ghostContent {
-  visibility: hidden;
 }
 </style>

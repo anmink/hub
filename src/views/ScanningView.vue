@@ -5,18 +5,22 @@
       <Header itemRight />
 
       <div class="descriptionContainer">
-        <h2>Scan barcode from sticked label and pull the scan-trigger</h2>
+        <h2>
+          SBarcode vom aufgeklebten Etikett scannen und den Scan-Knopf betätigen
+        </h2>
         <div class="descWrapper">
           <img src="../assets/icons/scan.svg" class="svg" />
           <input class="inputField" v-model="code" autofocus />
         </div>
 
-        <p v-if="errorMsg">ErrorMessage</p>
+        <p v-if="errorMsg">
+          Der Barcodeeintrag fehlt. Bitte Feld auswählen und Barcode scannen.
+        </p>
       </div>
     </div>
 
     <div class="footerWrapper">
-      <button @click="submitForm" class="buttonBasic btn">DONE</button>
+      <button @click="submitForm" class="buttonBasic btn">FERTIG</button>
 
       <Footer />
     </div>
