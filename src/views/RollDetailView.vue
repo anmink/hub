@@ -17,7 +17,7 @@ export default {
 
   async mounted() {
     const response = await axios.get(
-      'https://mdp-fapp.azurewebsites.net/api/get_mother_roll_dataset?&code=t-zPbkak08dTNYZXcnUogOJL6fKmnBPQH5gS7ZfdfN1AAzFum0Mm3Q==&full-data=true&include-subsystems=true',
+      'https://wepasf-staging.azurewebsites.net/api/get_mother_roll_dataset?code=RwT469AkpMG2AcJTXjFibkQXWI_i3qhR2EZM4dtESNi4AzFuq__REA==&include-subsystems=true',
       {
         params: { search: this.$store.state.barcode },
       }
