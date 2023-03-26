@@ -13,10 +13,13 @@ export default {
     <div class="contentWrapper">
       <Header itemRight />
       <div class="buttonWrapper">
-        <button class="card">
-          <img src="../assets/icons/star.svg" class="svg" />
-          <p class="text">Matching rolls</p>
-        </button>
+        <a href="https://pmui.wepacloud.eu/">
+          <button class="card">
+            <img src="../assets/icons/star.svg" class="svg" />
+            <p class="text">Matching rolls</p>
+          </button></a
+        >
+
         <button class="card" @click="this.$router.push('/scan')">
           <img src="../assets/icons/info.svg" class="svg" />
           <p class="text">Roll informations</p>
