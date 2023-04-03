@@ -68,7 +68,7 @@ export default {
   font-family: var(--font-bold);
   padding: 4px;
   color: white;
-  border-radius: 4px;
+  border-radius: 2px;
   margin-left: 8px;
 }
 .red {

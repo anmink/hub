@@ -1,10 +1,12 @@
 <script>
 import Tag from './tag.vue'
+import TagRollClass from './tagRollClass.vue'
 import moment from 'moment'
 
 export default {
   components: {
     Tag,
+    TagRollClass,
   },
   props: ['details'],
   data() {
@@ -19,7 +21,11 @@ export default {
   <div class="container">
     <div class="numberContainer">
       <p>{{ this.details.lotno }}</p>
-      <div><Tag :code="this.details" /></div>
+      <Tag :code="this.details" />
+      <TagRollClass
+        :content="this.details.roll_class"
+        :type="this.details.roll_class"
+      />
     </div>
     <hr class="line" />
     <div class="detailsContainer space-between">
@@ -118,6 +124,7 @@ export default {
 .numberContainer {
   display: flex;
   align-items: center;
+  gap: 8px;
 }
 .detailsContainer {
   display: flex;
